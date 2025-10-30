@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Subir Evidencia</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, rgba(0, 51, 102, 0.8), rgba(0, 102, 204, 0.8)), 
+                  url('https://images.unsplash.com/photo-1584697964383-664e9bf3c0a1');
+      background-size: cover;
+      background-position: center;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+      backdrop-filter: blur(4px);
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    h2 {
+      background: rgba(0, 0, 0, 0.6);
+      padding: 20px 40px;
+      border-radius: 25px;
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+      font-size: 2rem;
+      letter-spacing: 1px;
+    }
+
+    p {
+      background: rgba(0, 0, 0, 0.5);
+      padding: 15px 25px;
+      border-radius: 15px;
+      width: 70%;
+      line-height: 1.6;
+      margin-top: 20px;
+      font-size: 1.1rem;
+    }
+
+    .correo {
+      color: #FFD700; /* dorado */
+      font-weight: bold;
+      text-decoration: none;
+      transition: color 0.4s, text-shadow 0.3s;
+      animation: brillo 2s infinite alternate;
+    }
+
+    .correo:hover {
+      color: #00FFFF; /* cian brillante */
+      text-shadow: 0 0 10px #00FFFF;
+    }
+
+    @keyframes brillo {
+      from { text-shadow: 0 0 5px #FFD700; }
+      to { text-shadow: 0 0 20px #FFD700; }
+    }
+
+    a.boton {
+      background-color: #00BFA6;
+      color: white;
+      padding: 15px 30px;
+      border-radius: 12px;
+      text-decoration: none;
+      margin-top: 25px;
+      transition: transform 0.2s, background-color 0.3s;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+
+    a.boton:hover {
+      background-color: #008C7A;
+      transform: scale(1.07);
+    }
+
+  </style>
+</head>
+<body>
+  <h2>📤 Sube tu Evidencia</h2>
+  <p>
+    Debes enviar evidencia de haber completado el formulario al siguiente correo: <br>
+    <a href="mailto:emerson25urtado@gmail.com" class="correo">emerson25urtado@gmail.com</a>
+  </p>
+
+  <!-- Botón que enlaza a la página de encuesta -->
+  <a href="encuesta.html" class="boton">Volver al inicio </a>
+</body>
+</html>
+
+
