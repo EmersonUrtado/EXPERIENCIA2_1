@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bienvenidos Estudiantes</title>
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+      background-image: url("https://images.unsplash.com/photo-1584697964198-10d8d3d84a4d?auto=format&fit=crop&w=1350&q=80");
+      background-size: cover;
+      background-position: center;
+      color: white;
+      text-align: center;
+      padding-top: 100px;
+      margin: 0;
+      height: 100vh;
+      overflow: hidden;
+      backdrop-filter: brightness(0.85);
+    }
+
+    h1 {
+      font-size: 3em;
+      text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6);
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    p {
+      font-size: 1.5em;
+      margin-top: 10px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      animation: slideUp 2s ease-in-out;
+    }
+
+    .botones {
+      margin-top: 50px;
+    }
+
+    button {
+      background-color: rgba(255, 255, 255, 0.9);
+      color: #4e54c8;
+      border: none;
+      padding: 15px 30px;
+      margin: 10px;
+      border-radius: 30px;
+      font-size: 1.1em;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      transition: transform 0.2s ease, background-color 0.3s, box-shadow 0.3s;
+    }
+
+    button:hover {
+      background-color: #8f94fb;
+      color: white;
+      transform: scale(1.1);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0; transform: scale(0.9);}
+      to {opacity: 1; transform: scale(1);}
+    }
+
+    @keyframes slideUp {
+      from {opacity: 0; transform: translateY(50px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    /* Fondo suave oscuro para legibilidad */
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.4);
+      z-index: -1;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="overlay"></div>
+
+  <h1 id="titulo"></h1>
+  <p id="mensaje"></p>
+
+  <div class="botones">
+    <button id="btnDiapositiva">Ver diapositiva</button>
+    <button id="btnJuego">Ir al juego</button>
+  </div>
+
+  <script>
+    // Texto animado
+    const titulo = document.getElementById("titulo");
+    const mensaje = document.getElementById("mensaje");
+
+    const textoTitulo = "¡BIENVENIDOS ESTUDIANTES!";
+    const textoMensaje = "Se les agradece por participar en esta experiencia educativa.";
+
+    let i = 0;
+    function escribirTitulo() {
+      if (i < textoTitulo.length) {
+        titulo.textContent += textoTitulo.charAt(i);
+        i++;
+        setTimeout(escribirTitulo, 80);
+      } else {
+        escribirMensaje();
+      }
+    }
+
+    let j = 0;
+    function escribirMensaje() {
+      if (j < textoMensaje.length) {
+        mensaje.textContent += textoMensaje.charAt(j);
+        j++;
+        setTimeout(escribirMensaje, 50);
+      }
+    }
+
+    escribirTitulo();
+
+    // Enlaces (modifica con tus propios links)
+    document.getElementById("btnDiapositiva").onclick = () => {
+      window.open("https://seguridad-de-red-rrqhgeb.gamma.site/", "_blank");
+    };
+
+    document.getElementById("btnJuego").onclick = () => {
+      window.open("https://edu.delightex.com/BDH-WGG", "_blank");
+    };
+  </script>
+
+</body>
+</html>
